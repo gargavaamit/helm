@@ -66,7 +66,7 @@ isvaconfig:
     # won't use a storage class.
     storageClassName: "default"
 
-    size:        50Gi
+    size:        1Gi
 
 ###############################################################################
 # Web Reverse Proxy container variables.
