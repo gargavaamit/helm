@@ -13,8 +13,6 @@ global:
     wrprepository:   ibmcom/verify-access-wrp:10.0.8.0
     runtimerepository:   ibmcom/verify-access-runtime:10.0.8.0
     dscrepository:   ibmcom/verify-access-dsc:10.0.8.0
-    dbrepository: ibmcom/verify-access-postgresql:10.0.2.0
-    ldaprepository: ibmcom/verify-access-openldap:10.0.2.0
     pullPolicy:   IfNotPresent
 
   # Image credentials (not needed unless using a private repository)
@@ -62,7 +60,7 @@ isvaconfig:
 
     # Specify the name of the Existing Claim to be used by your application.
     # An empty string means that an existing claim will not be used.
-    existingClaimName: ""
+    existingClaimName: "uat-isvaconfig-aac"
 
     # Specify the name of the storage class.  Any empty string means that we
     # won't use a storage class.
