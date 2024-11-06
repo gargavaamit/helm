@@ -60,13 +60,13 @@ isvaconfig:
 
     # Specify the name of the Existing Claim to be used by your application.
     # An empty string means that an existing claim will not be used.
-    existingClaimName: "isvaconfig"
+    existingClaimName: ""
 
     # Specify the name of the storage class.  Any empty string means that we
     # won't use a storage class.
-    storageClassName: "default"
+    storageClassName: ""
 
-    size:        1Gi
+    size:        15Gi
 
 ###############################################################################
 # Web Reverse Proxy container variables.
