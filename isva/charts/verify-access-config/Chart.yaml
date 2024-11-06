@@ -7,6 +7,7 @@ description: The configuration utility which is used to configure the IBM Securi
 icon: https://d1q6f0aelx0por.cloudfront.net/product-logos/32925feb-af2b-4b4c-8276-def2a031ed31-artwork2x.png
 
 version: 1.4.0
+engine: gotpl
 appVersion: 10.0.8.0
 
 keywords:
