@@ -29,7 +29,7 @@ global:
 
   # Data Volume
   dataVolume:
-    existingClaimName: ""
+    existingClaimName: "isvaconfig"
     size: 1Gi
 
 ###############################################################################
