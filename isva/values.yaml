@@ -24,7 +24,7 @@ global:
     snapshot:            ""
     fixpacks:            ""
     adminSecret:         ""
-    timezone:            "Etc/UTC"
+    timezone:            "Asia/Ho_Chi_Minh"
 
   # Persistence Storage
   persistence:
@@ -64,9 +64,9 @@ isvaconfig:
 
     # Specify the name of the storage class.  Any empty string means that we
     # won't use a storage class.
-    storageClassName: ""
+    storageClassName: "efs"
 
-    size:        20Gi
+    size:        50Gi
 
 ###############################################################################
 # Web Reverse Proxy container variables.

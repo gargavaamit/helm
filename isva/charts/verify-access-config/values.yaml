@@ -9,7 +9,7 @@
 global:
   # Common image variables
   image:
-    repository: ibmcom/verify-access:10.0.2.0
+    repository: icr.io/isva/verify-access:10.0.8.0
     pullPolicy: IfNotPresent
 
   # Image credentials.
@@ -28,7 +28,7 @@ global:
 
   # Data Volume
   dataVolume:
-    existingClaimName: ""
+    existingClaimName: "uat-isvaconfig-aac"
     size: 20Gi
 
 ###############################################################################
