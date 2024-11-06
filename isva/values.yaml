@@ -64,7 +64,7 @@ isvaconfig:
 
     # Specify the name of the storage class.  Any empty string means that we
     # won't use a storage class.
-    storageClassName: "efs"
+    storageClassName: "default"
 
     size:        50Gi
 
