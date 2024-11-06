@@ -29,7 +29,7 @@ global:
 
   # Data Volume
   dataVolume:
-    existingClaimName: "uat-isvaconfig-aac"
+    existingClaimName: "isvaconfig"
     size: 1Gi
 
 ###############################################################################
