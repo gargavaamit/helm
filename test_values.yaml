@@ -1,4 +1,5 @@
-appLabel: isvaconfig-aac
+
+appLabel: isvaconfig-rp
 container:
   env:
     adminpw:
@@ -24,7 +25,7 @@ container:
   image:
     repository: icr.io/isva/verify-access
     tag: 10.0.8.0
-  name: isvaconfig-aac
+  name: isvaconfig-rp
   resources:
     limits:
       cpu: '2'
@@ -35,27 +36,6 @@ container:
   volumeMounts:
   - mountPath: /var/shared
   - mountPath: /var/application.logs
-name: isvaconfig-aac
-persistentVolumeClaim: isvaconfig-aac
+name: isvaconfig-rp
+persistentVolumeClaim: isvaconfig-rp
 replicaCount: 1
-
-isvaconfigRp:
-  replicaCount: 1
-  persistentVolumeClaim: isvaconfig-rp
-  name: isvaconfig-rp
-  image:
-    repository: icr.io/isva/verify-access
-    tag: 10.0.8.0
-  resources:
-    requests:
-      cpu: "2"
-      memory: "3814Mi"
-    limits:
-      cpu: "2"
-      memory: "3814Mi"
-  volumeMounts:
-  - mountPath: /var/shared
-  - mountPath: /var/application.logs  
-  container:
-    timezone: "Asia/Ho_Chi_Minh"
-    configServiceTlsCaCert: "disabled"
