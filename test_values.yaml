@@ -1,0 +1,61 @@
+appLabel: isvaconfig-aac
+container:
+  env:
+    adminpw:
+      key: adminpw
+      secretName: isvaadmin
+    isva_adminpw:
+      key: adminpw
+      secretName: isva-secrets
+    adminPassword:
+      key: adminPassword
+      secretName: isva-admin
+    cfgsvcpw:
+      key: cfgsvcpw
+      secretName: configreader
+    ADMIN_PASSWORD:
+      key: adminPassword
+      secretName: isva-admin
+    ISVA_RUNTIME_DB_TYPE: embedded
+    JAVA_DEBUG: 'false'
+    JAVA_DEBUG_PORT: '5005'
+    JAVA_VERBOSE: 'false'
+    LICENSE: accept
+  image:
+    repository: icr.io/isva/verify-access
+    tag: 10.0.8.0
+  name: isvaconfig-aac
+  resources:
+    limits:
+      cpu: '2'
+      memory: 3814Mi
+    requests:
+      cpu: '2'
+      memory: 3814Mi
+  volumeMounts:
+  - mountPath: /var/shared
+  - mountPath: /var/application.logs
+name: isvaconfig-aac
+persistentVolumeClaim: isvaconfig-aac
+replicaCount: 1
+
+isvaconfigRp:
+  replicaCount: 1
+  persistentVolumeClaim: isvaconfig-rp
+  name: isvaconfig-rp
+  image:
+    repository: icr.io/isva/verify-access
+    tag: 10.0.8.0
+  resources:
+    requests:
+      cpu: "2"
+      memory: "3814Mi"
+    limits:
+      cpu: "2"
+      memory: "3814Mi"
+  volumeMounts:
+  - mountPath: /var/shared
+  - mountPath: /var/application.logs  
+  container:
+    timezone: "Asia/Ho_Chi_Minh"
+    configServiceTlsCaCert: "disabled"
